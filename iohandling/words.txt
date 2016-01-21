@@ -1,0 +1,6 @@
+apples
+pears
+oranges
+carrots
+cabbages
+grapes
