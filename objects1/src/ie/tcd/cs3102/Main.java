@@ -10,5 +10,9 @@ public class Main {
 
         String m = exif.getManufacturer();
         System.out.println("Manu: " + m + " ISO " + exif.getISO());
+
+        EXIF other = new EXIF();
+
+        System.out.println(EXIF.getCount());
     }
 }

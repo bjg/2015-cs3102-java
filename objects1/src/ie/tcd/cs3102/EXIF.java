@@ -4,17 +4,29 @@ package ie.tcd.cs3102;
  * Created by brian on 19/01/2016.
  */
 public class EXIF {
+    /*
+     * State (instance variables)
+     */
     private String manufacturer;
     private double exposureTime;
     private int ISO;
     private int xResolution;
     private int yResolution;
 
+    /*
+     * Pseudo - global
+     */
+    private static int count = 0;
+
+    /*
+     * Initialisation
+     */
     public EXIF() {
         this(200);
     }
 
     public EXIF(int ISO) {
+        count++;
         this.ISO = ISO;
     }
 
@@ -24,6 +36,9 @@ public class EXIF {
         this.yResolution = yResolution;
     }
 
+    /*
+     * Behaviour
+     */
     public String getManufacturer() {
         return manufacturer;
     }
@@ -48,5 +63,9 @@ public class EXIF {
     // Mutator method - setter
     public void setManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
+    }
+
+    public static int getCount() {
+        return count;
     }
 }
